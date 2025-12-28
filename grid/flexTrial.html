@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<style>
+ .container {
+  display: flex;
+  flex-direction: column;
+ }
+
+ header {
+  padding: 15px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+ }
+
+ header nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: baseline;
+  list-style-type: none;
+ }
+
+ .wrapper {
+  display: flex;
+  /* flex-direction: row; */
+ }
+
+ .main {
+  flex: 3;
+  margin-right: 60px;
+ }
+
+ .sidebar {
+  flex: 2;
+ }
+</style>
+
+<body>
+ <div class="container">
+
+  <header style="background: skyblue;">
+   <nav>
+    <ul>
+     <li>Home</li>
+     <li>About</li>
+     <li>Gallery</li>
+    </ul>
+   </nav>
+   <button>Contact</button>
+  </header>
+  <div class="wrapper">
+   <aside class="sidebar">
+    <h3></h3>
+    <ul>
+     <li>A</li>
+     <li>B</li>
+     <li>C</li>
+     <li>D</li>
+     <li></li>
+    </ul>
+   </aside>
+   <section class="main">
+    <img src="css-grid.jpg" alt="">
+    <h2>Parrot</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+     <br>debitis blanditiis quia molestiae dolorem enim repudiandae<br>
+     voluptate odit fuga labore iusto aperiam maxime, doloribus facere exercitationem deserunt, minus ab corporis?
+    </p>
+   </section>
+  </div><!-- /wrapper -->
+  <footer>
+   <h3>Foot</h3>
+   <p>DuDe</p>
+  </footer>
+ </div>
+ <!-- container -->
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!-- Flex inside Grid → slightly more complex, useful in moderate/complex layouts (like galleries, cards, dashboards) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Flex inside Grid</title>
+ <style>
+  html {
+   font-size: 16px;
+  }
+
+  body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+  }
+
+  /* Navbar (Flex) */
+  header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0.9375rem 1.25rem;
+   background-color: #333;
+   color: #fff;
+  }
+
+  header .logo {
+   font-size: 1.5rem;
+   font-weight: bold;
+  }
+
+  header nav {
+   display: flex;
+   gap: 1.25rem;
+  }
+
+  header nav a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: 500;
+  }
+
+  header nav a:hover {
+   text-decoration: underline;
+  }
+
+  /* Main Gallery (Grid) */
+  .main-gallery {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+   gap: 0.9375rem;
+   padding: 1.25rem;
+  }
+
+  .main-gallery div {
+   background-color: #eee;
+   height: 9.375rem;
+
+   /* Flex inside each grid item */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 0.5rem;
+   font-weight: bold;
+  }
+
+  /* Footer (Flex) */
+  footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0.9375rem;
+   background-color: #333;
+   color: #fff;
+  }
+
+  /* Responsive */
+  @media (max-width: 37.5rem) {
+   header {
+    flex-direction: column;
+    gap: 0.625rem;
+    text-align: center;
+   }
+
+   header nav {
+    flex-direction: column;
+    gap: 0.625rem;
+   }
+  }
+ </style>
+</head>
+
+<body>
+
+ <header>
+  <div class="logo">MySite</div>
+  <nav>
+   <a href="#">Home</a>
+   <a href="#">Gallery</a>
+   <a href="#">About</a>
+   <a href="#">Contact</a>
+  </nav>
+ </header>
+
+ <section class="main-gallery">
+  <div>
+   <div>Item 1</div>
+   <div>Subtext</div>
+  </div>
+  <div>
+   <div>Item 2</div>
+   <div>Subtext</div>
+  </div>
+  <div>
+   <div>Item 3</div>
+   <div>Subtext</div>
+  </div>
+  <div>
+   <div>Item 4</div>
+   <div>Subtext</div>
+  </div>
+  <div>
+   <div>Item 5</div>
+   <div>Subtext</div>
+  </div>
+  <div>
+   <div>Item 6</div>
+   <div>Subtext</div>
+  </div>
+ </section>
+
+ <footer>
+  &copy; 2025 MySite. All rights reserved.
+ </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Grid Layoout</title>
+</head>
+<style>
+ .container{
+  display: grid;
+  grid-template-areas: 
+  "header header header"
+  "sidebar contnt1 contnt1"
+  "sidebar contnt2 contnt3"
+  "footr footr footr";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+ }
+
+ .block{
+ background: green;
+ color: white;
+ padding: 1rem;
+ text-align: center;
+ }
+ 
+ .header{
+ grid-area: header;
+ }
+
+ .sidebar{
+  grid-area: sidebar;
+ }
+
+ .contnt1{
+  grid-area: contnt1;
+ }
+ .contnt2{
+  grid-area: contnt2;
+ }
+ .contnt3{
+  grid-area: contnt3;
+ }
+ .footr{
+  grid-area: footr;
+ }
+</style>
+<body>
+ <div class="container">
+ <div class="header block"><h4>Header</h4></div>
+ <div class="sidebar block"><h4>Side Bar</h4></div>
+ <div class="contnt1 block"><h4>Content 1</h4></div>
+ <div class="contnt2 block"><h4>Content 2</h4></div>
+ <div class="contnt3 block"><h4>Content 3</h4></div>
+ <div class="footr block"><h4>Footer</h4></div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Flex + Grid Template (All in rem)</title>
+ <style>
+  /* --- Global Styles --- */
+  html {
+   font-size: 16px;
+  }
+
+  /* 1rem = 16px */
+  body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+  }
+
+  /* --- Navbar (Flex) --- */
+  header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0.9375rem 1.25rem;
+   /* 15px 20px */
+   background-color: #333;
+   color: #fff;
+  }
+
+  header .logo {
+   font-size: 1.5rem;
+   /* 24px */
+   font-weight: bold;
+  }
+
+  header nav {
+   display: flex;
+   gap: 1.25rem;
+   /* 20px */
+  }
+
+  header nav a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: 500;
+  }
+
+  header nav a:hover {
+   text-decoration: underline;
+  }
+
+  /* --- Main Content (Grid) --- */
+  .main-gallery {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+   /* 200px */
+   gap: 0.9375rem;
+   /* 15px */
+   padding: 1.25rem;
+   /* 20px */
+  }
+
+  .main-gallery div {
+   background-color: #eee;
+   height: 9.375rem;
+   /* 150px */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: bold;
+  }
+
+  /* --- Footer (Flex) --- */
+  footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 0.9375rem;
+   /* 15px */
+   background-color: #333;
+   color: #fff;
+  }
+
+  /* --- Responsive Adjustments --- */
+  @media (max-width: 37.5rem) {
+
+   /* 600px */
+   header {
+    flex-direction: column;
+    gap: 0.625rem;
+    /* 10px */
+    text-align: center;
+   }
+
+   header nav {
+    flex-direction: column;
+    gap: 0.625rem;
+    /* 10px */
+   }
+  }
+ </style>
+</head>
+
+<body>
+
+ <!-- Navbar (Flex) -->
+ <header>
+  <div class="logo">MySite</div>
+  <nav>
+   <a href="#">Home</a>
+   <a href="#">Gallery</a>
+   <a href="#">About</a>
+   <a href="#">Contact</a>
+  </nav>
+ </header>
+
+ <!-- Main Gallery (Grid) -->
+ <section class="main-gallery">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+  <div>Item 4</div>
+  <div>Item 5</div>
+  <div>Item 6</div>
+ </section>
+
+ <!-- Footer (Flex) -->
+ <footer>
+  &copy; 2025 MySite. All rights reserved.
+ </footer>
+
+</body>
+
+</html>

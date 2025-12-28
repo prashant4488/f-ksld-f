@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Responsive Flex‑in‑Grid Template</title>
+ <style>
+  html {
+   font-size: 16px;
+   /* 1rem = 16px */
+  }
+
+  /* -------------- Global Box Sizing -------------- */
+  *,
+  *::before,
+  *::after {
+   box-sizing: border-box;
+  }
+
+  /* -------------- Body -------------- */
+  body {
+   margin: 0;
+   font-family: system-ui, Arial, sans-serif;
+   line-height: 1.6;
+   color: #111;
+   background: #fafafa;
+  }
+
+  /* -------------- Header (Grid containing Flex items) -------------- */
+  header {
+   display: grid;
+   place-content: center;
+   background: #222;
+   color: #fff;
+   padding: 1.5rem;
+   gap: 1rem;
+  }
+
+  header .navbar {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+   justify-content: center;
+  }
+
+  header .navbar a {
+   text-decoration: none;
+   color: #fff;
+   font-weight: 600;
+   padding: 0.5rem 1rem;
+   border-radius: 0.375rem;
+   background: #444;
+  }
+
+  /* -------------- Main (Grid) -------------- */
+  main {
+   display: grid;
+   gap: 1.5rem;
+   padding: 1.5rem;
+   /* auto-fit makes columns collapse responsively */
+   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  /* Each card uses flex for alignment */
+  main .card {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 0.75rem;
+   padding: 1.25rem;
+   background: #fff;
+   border-radius: 0.5rem;
+   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+   text-align: center;
+  }
+
+  /* -------------- Footer (Simple Flex) -------------- */
+  footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 0.5rem;
+   padding: 1rem;
+   background: #222;
+   color: #fff;
+   font-size: 0.875rem;
+  }
+
+  /* Very minimal media query just for ultra‑small screens */
+  @media (max-width: 20rem) {
+   header .navbar {
+    flex-direction: column;
+   }
+  }
+ </style>
+</head>
+
+<body>
+
+ <!-- Header -->
+ <header>
+  <div class="navbar">
+   <a href="#">Home</a>
+   <a href="#">About</a>
+   <a href="#">Services</a>
+   <a href="#">Contact</a>
+  </div>
+ </header>
+
+ <!-- Main Content (Grid with Flex inside each card) -->
+ <main>
+  <div class="card">
+   <h2>Item 1</h2>
+   <p>Some description here.</p>
+  </div>
+  <div class="card">
+   <h2>Item 2</h2>
+   <p>Some description here.</p>
+  </div>
+  <div class="card">
+   <h2>Item 3</h2>
+   <p>Some description here.</p>
+  </div>
+  <div class="card">
+   <h2>Item 4</h2>
+   <p>Some description here.</p>
+  </div>
+  <div class="card">
+   <h2>Item 5</h2>
+   <p>Some description here.</p>
+  </div>
+  <div class="card">
+   <h2>Item 6</h2>
+   <p>Some description here.</p>
+  </div>
+ </main>
+
+ <!-- Footer -->
+ <footer>
+  <span>&copy; 2025 MyWebsite. All Rights Reserved</span>
+ </footer>
+
+</body>
+
+</html>
